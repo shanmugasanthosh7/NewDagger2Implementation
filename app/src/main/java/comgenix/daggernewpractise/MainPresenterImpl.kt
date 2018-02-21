@@ -1,7 +1,9 @@
 package comgenix.daggernewpractise
 
-class MainPresenterImpl(private val mainView: MainView, private val apiService: String) :
-        MainPresenter, MainInteractor.OnFinishedListener {
+import javax.inject.Inject
+
+
+class MainPresenterImpl @Inject constructor(var mainView: MainView, var apiService: ApiService) : MainPresenter, MainInteractor.OnFinishedListener {
 
     private var mainInteractor: MainInteractor = MainInteractorImpl()
 

@@ -1,9 +1,6 @@
 package comgenix.daggernewpractise.di
 
-import comgenix.daggernewpractise.MainActivity
-import comgenix.daggernewpractise.MainPresenter
-import comgenix.daggernewpractise.MainPresenterImpl
-import comgenix.daggernewpractise.MainView
+import comgenix.daggernewpractise.*
 import dagger.Module
 import dagger.Provides
 
@@ -16,12 +13,7 @@ class MainActivityModule {
     }
 
     @Provides
-    fun provideApiService(): String {
-        return "Apiservice"
-    }
-
-    @Provides
-    fun provideMainPresenter(mainView: MainView, apiService: String): MainPresenter {
+    fun provideMainPresenter(mainView: MainView, apiService: ApiService): MainPresenter {
         return MainPresenterImpl(mainView, apiService)
     }
 

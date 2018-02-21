@@ -2,6 +2,6 @@ package comgenix.daggernewpractise
 
 interface MainView {
 
-    fun loadView(apiService: String)
+    fun loadView(result: String)
 
 }

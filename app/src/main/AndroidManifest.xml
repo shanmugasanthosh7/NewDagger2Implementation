@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="comgenix.daggernewpractise">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".DgApplication"
         android:allowBackup="true"

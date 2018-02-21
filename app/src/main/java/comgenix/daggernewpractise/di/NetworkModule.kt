@@ -1,7 +1,7 @@
-package com.genix.wonder.framework.connection
+package comgenix.daggernewpractise.di
 
-import AppConstantsHelper
 import android.content.Context
+import comgenix.daggernewpractise.ApiService
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -17,17 +17,17 @@ import javax.inject.Singleton
  */
 
 @Module
-class NetworkModule(private var context: Context, private val baseUrl: String) {
+class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideOkHttpClient(): OkHttpClient {
+    fun provideOkHttpClient(context: Context): OkHttpClient {
         val httpClient = OkHttpClient.Builder()
         httpClient.addInterceptor { chain ->
             val original = chain.request()
             val requestBuilder = original.newBuilder()
             //Add headers here using requestbuilder.
-            requestBuilder.header(AppConstantsHelper.CONTENT_TYPE, AppConstantsHelper.CONTENT_TYPE_JSON)
+            requestBuilder.header("Content-Type", "application/json")
             requestBuilder.method(original.method(), original.body())
             chain.proceed(requestBuilder.build())
         }
@@ -43,7 +43,7 @@ class NetworkModule(private var context: Context, private val baseUrl: String) {
 
     @Singleton
     @Provides
-    fun provideRetrofit(client: OkHttpClient): Retrofit = Retrofit.Builder().baseUrl(baseUrl)
+    fun provideRetrofit(client: OkHttpClient): Retrofit = Retrofit.Builder().baseUrl("https://wordpress.org/")
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)

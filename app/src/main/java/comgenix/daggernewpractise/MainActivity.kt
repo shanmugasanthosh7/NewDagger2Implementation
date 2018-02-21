@@ -1,6 +1,7 @@
 package comgenix.daggernewpractise
 
 import android.os.Bundle
+import android.util.Log
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
@@ -15,6 +16,7 @@ class MainActivity : DaggerAppCompatActivity(), MainView {
         mainPresenter.onLoadView()
     }
 
-    override fun loadView(apiService: String) {
+    override fun loadView(result: String) {
+        Log.d("Result", result)
     }
 }

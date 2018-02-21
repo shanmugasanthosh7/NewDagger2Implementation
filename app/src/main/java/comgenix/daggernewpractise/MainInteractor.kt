@@ -6,6 +6,6 @@ interface MainInteractor {
         fun onFinishLoadView(apiService: String)
     }
 
-    fun onLoadView(apiService: String, onFinishedListener: OnFinishedListener)
+    fun onLoadView(apiService: ApiService, onFinishedListener: OnFinishedListener)
 
 }
