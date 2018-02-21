@@ -1,0 +1,102 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.21'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0-beta3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+ext {
+    // The following are only a few types of properties you can define.
+    compileSdkVersion = 27
+
+    buildToolsVersion = "27.0.2"
+
+    minSdkVersion = 19
+
+    targetSdkVersion = 27
+
+    versionCode = 1
+    //previous - dev build versioncode- 23,current - 24 | prod build versionCode- previous - 22 , current - 23
+
+    versionName = "1.0"
+    //previous - dev build versionName- 1.3.0-beta, current - 1.3.7 | prod build versionName- 1.3.0-beta, current - 1.4.0
+
+    // You can also use this to specify versions for dependencies. Having consistent
+    // versions between modules can avoid behavior conflicts.
+
+    //SupportLib
+    supportLibVersion = "27.0.2"
+
+    //Gilde
+    glideVersion = "4.2.0"
+
+    //multidex
+    multiDexVersion = "1.0.2"
+
+    //Stream annimon
+    annimonStreamVersion = "1.1.7"
+
+    //retrofit
+    retrofitVersion = "2.3.0"
+
+    //ConstraintLayout
+    constraintLayoutVersion = "1.0.2"
+
+    //tooltip
+    toolTipVersion = "0.1.2@aar"
+
+    //Carshlytics
+    crashlyticsVersion = "2.8.0@aar"
+
+    //RxJava
+    rxJavaVersion = "2.1.8"
+
+    //RxAndroid
+    rxAndroid = "2.0.1"
+
+    //RXKotlin
+    rxKotlin = "2.2.0"
+
+    //Dagger 2
+    dagger2Version = "2.14.1"
+
+    //verticalStepper
+    verticalStepperVersion = "0.9.9"
+
+    //OpenTok
+    openTokVersion = "2.12.1"
+
+    //EasyPermission
+    easyPermissionVersion = "0.4.0"
+
+    //Android Job
+    everNoteAndroidJob = "1.2.1"
+
+    //playServiceGcm
+    playServiceGcmVersion = "11.8.0"
+
+    //firebaseVersion
+    firebaseVersion = "11.8.0"
+
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
