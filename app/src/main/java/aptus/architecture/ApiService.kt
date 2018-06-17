@@ -1,4 +1,4 @@
-package comgenix.daggernewpractise
+package aptus.architecture
 
 import io.reactivex.Observable
 import retrofit2.http.GET
@@ -12,5 +12,4 @@ interface ApiService {
 
     @GET("wp-json/wp/v2/posts")
     fun getPosts(): Observable<ArrayList<String>>
-
 }

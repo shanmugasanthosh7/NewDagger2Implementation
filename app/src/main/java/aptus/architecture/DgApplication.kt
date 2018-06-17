@@ -1,6 +1,6 @@
-package comgenix.daggernewpractise
+package aptus.architecture
 
-import comgenix.daggernewpractise.di.DaggerAppComponent
+import aptus.architecture.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 

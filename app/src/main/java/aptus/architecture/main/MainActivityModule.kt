@@ -1,6 +1,10 @@
-package comgenix.daggernewpractise.di
+package aptus.architecture.main
 
-import comgenix.daggernewpractise.*
+import aptus.architecture.*
+import aptus.architecture.main.MainActivity
+import aptus.architecture.main.MainPresenter
+import aptus.architecture.main.MainPresenterImpl
+import aptus.architecture.main.MainView
 import dagger.Module
 import dagger.Provides
 

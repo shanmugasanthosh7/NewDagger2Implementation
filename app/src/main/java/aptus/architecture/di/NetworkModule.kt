@@ -1,7 +1,7 @@
-package comgenix.daggernewpractise.di
+package aptus.architecture.di
 
 import android.content.Context
-import comgenix.daggernewpractise.ApiService
+import aptus.architecture.ApiService
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache

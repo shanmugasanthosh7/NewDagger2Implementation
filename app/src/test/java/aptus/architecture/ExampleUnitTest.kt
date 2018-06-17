@@ -1,4 +1,4 @@
-package comgenix.daggernewpractise
+package aptus.architecture
 
 import org.junit.Test
 

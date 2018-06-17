@@ -1,7 +1,7 @@
-package comgenix.daggernewpractise.di
+package aptus.architecture.di
 
 import android.app.Application
-import comgenix.daggernewpractise.DgApplication
+import aptus.architecture.DgApplication
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -12,9 +12,6 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [AndroidSupportInjectionModule::class, AppModule::class, ActivityBuilder::class])
 interface AppComponent : AndroidInjector<DaggerApplication> {
-
-    /*@Component.Builder
-    abstract class Builder : AndroidInjector.Builder<DaggerApplication>() {}*/
 
     @Component.Builder
     interface Builder {
@@ -29,5 +26,4 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
     fun inject(dgApplication: DgApplication)
 
     override fun inject(instance: DaggerApplication?)
-
 }

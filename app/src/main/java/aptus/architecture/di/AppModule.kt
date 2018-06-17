@@ -1,4 +1,4 @@
-package comgenix.daggernewpractise.di
+package aptus.architecture.di
 
 import android.app.Application
 import android.content.Context
