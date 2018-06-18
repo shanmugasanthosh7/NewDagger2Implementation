@@ -5,8 +5,7 @@ import android.content.Context
 import dagger.Binds
 import dagger.Module
 
-//@Module(subcomponents = [MainActivityComponent::class])
-@Module(includes = [NetworkModule::class])
+@Module(includes = [NetworkModule::class, SchedulerProvideModule::class])
 abstract class AppModule {
 
     @Binds

@@ -88,6 +88,8 @@ ext {
     //firebaseVersion
     firebaseVersion = "11.8.0"
 
+    mockitoVersion = "2.8.47"
+
 }
 
 allprojects {

@@ -1,5 +1,6 @@
 package aptus.architecture
 
+import aptus.architecture.vo.Post
 import io.reactivex.Observable
 import retrofit2.http.GET
 
@@ -10,6 +11,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("wp-json/wp/v2/posts")
-    fun getPosts(): Observable<ArrayList<String>>
+    @GET("posts")
+    fun getPosts(): Observable<ArrayList<Post>>
 }

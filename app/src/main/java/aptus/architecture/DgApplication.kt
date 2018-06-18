@@ -11,17 +11,4 @@ class DgApplication : DaggerApplication() {
         appComponent.inject(this)
         return appComponent
     }
-
-/*    @Inject
-    lateinit var activityDispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
-
-    override fun onCreate() {
-        super.onCreate()
-        DaggerAppComponent.builder().application(this).build().inject(this)
-    }
-
-    override fun activityInjector(): AndroidInjector<Activity> {
-        return activityDispatchingAndroidInjector
-    }*/
-
 }

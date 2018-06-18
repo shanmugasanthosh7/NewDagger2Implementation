@@ -3,13 +3,13 @@ package aptus.architecture.main
 import android.os.Bundle
 import android.util.Log
 import aptus.architecture.R
+import aptus.architecture.vo.Post
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity(), MainView {
 
-    @Inject
-    lateinit var mainPresenter: MainPresenter
+    @Inject lateinit var mainPresenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +17,7 @@ class MainActivity : DaggerAppCompatActivity(), MainView {
         mainPresenter.onLoadView()
     }
 
-    override fun loadView(result: String) {
-        Log.d("Result\\", result)
+    override fun loadView(posts: ArrayList<Post>) {
+        // Do UI update
     }
 }

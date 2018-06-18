@@ -1,13 +1,14 @@
 package aptus.architecture.main
 
 import aptus.architecture.ApiService
+import aptus.architecture.vo.Post
 
 interface MainInteractor {
 
     interface OnFinishedListener {
-        fun onFinishLoadView(apiService: String)
+        fun onFinishLoadView(posts: ArrayList<Post>)
     }
 
-    fun onLoadView(apiService: ApiService, onFinishedListener: OnFinishedListener)
+    fun onLoadView(onFinishedListener: OnFinishedListener)
 
 }
