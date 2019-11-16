@@ -11,4 +11,4 @@ Please check the below post for more details,
 
 
 
-[TUTURL]: https://medium.com/@shanmugasanthosh/android-navigation-architecture-component-part-1-3c6458e9bff3
+[TUTURL]: https://medium.com/@shanmugasanthosh/android-why-do-we-need-a-good-architecture-18bdab042d78
